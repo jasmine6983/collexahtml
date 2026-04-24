@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Groups (Empty) - Collexa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="antialiased text-gray-800 bg-[#f8fbff] min-h-screen flex flex-col md:flex-row">
+
+    <!-- LEFT SIDEBAR (Desktop Web) -->
+    <aside
+        class="hidden md:flex w-64 lg:w-72 flex-col bg-white border-r border-gray-100 min-h-screen p-6 shadow-[4px_0_24px_-10px_rgba(0,0,0,0.03)] z-10 sticky top-0">
+        <!-- Brand Logo -->
+        <div class="flex items-center space-x-3 mb-12 mt-2 px-2">
+            <div class="w-10 h-10">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                    <path d="M50 15 C 70 15, 85 30, 85 50" stroke="#0055ff" stroke-width="7" stroke-linecap="round" />
+                    <circle cx="85" cy="50" r="7" fill="#15803d" />
+                    <path d="M80 55 C 70 75, 45 85, 25 75" stroke="#15803d" stroke-width="7" stroke-linecap="round" />
+                    <circle cx="25" cy="75" r="7" fill="#f59e0b" />
+                    <path d="M20 65 C 10 40, 25 15, 45 15" stroke="#f59e0b" stroke-width="7" stroke-linecap="round" />
+                    <circle cx="45" cy="15" r="7" fill="#0055ff" />
+                </svg>
+            </div>
+            <span class="text-2xl font-extrabold tracking-tight text-[#1a202c]">Collexa</span>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex-1 space-y-2">
+            <a href="dashboard-active.html"
+                class="flex items-center space-x-3 px-4 py-3.5 text-gray-500 hover:bg-gray-50 hover:text-gray-900 rounded-xl font-semibold tracking-wide transition-colors">
+                <svg class="w-5 h-5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+                    </path>
+                </svg>
+                <span>Dashboard</span>
+            </a>
+            <a href="#"
+                class="flex items-center space-x-3 px-4 py-3.5 bg-[#f0f5ff] text-[#005ef5] rounded-xl font-bold tracking-wide transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                    </path>
+                </svg>
+                <span>All Groups</span>
+            </a>
+            <a href="#"
+                class="flex items-center space-x-3 px-4 py-3.5 text-gray-500 hover:bg-gray-50 hover:text-gray-900 rounded-xl font-semibold tracking-wide transition-colors">
+                <svg class="w-5 h-5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 9h6M9 11h6M11 11l3 4M10 9v6"></path>
+                </svg>
+                <span>Payments</span>
+            </a>
+            <a href="#"
+                class="flex items-center space-x-3 px-4 py-3.5 text-gray-500 hover:bg-gray-50 hover:text-gray-900 rounded-xl font-semibold tracking-wide transition-colors">
+                <svg class="w-5 h-5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+                <span>Profile</span>
+            </a>
+        </nav>
+
+        <!-- Logout -->
+        <div class="mt-auto border-t border-gray-100 pt-6">
+            <a href="login.html"
+                class="flex items-center space-x-3 px-4 py-3 text-red-500 hover:bg-red-50 rounded-xl font-bold tracking-wide transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
+                    </path>
+                </svg>
+                <span>Sign Out</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- CONTENT AREA -->
+    <main class="flex-1 flex flex-col min-h-screen pb-20 md:pb-0">
+        <!-- Container -->
+        <div
+            class="w-full max-w-[480px] md:max-w-[700px] lg:max-w-[800px] mx-auto md:mx-0 flex flex-col p-4 md:p-10 lg:p-14 relative h-full sm:shadow-none sm:bg-transparent">
+
+            <!-- Header Section -->
+            <header class="flex justify-between items-center mb-6 pt-2">
+                <!-- Back Arrow -->
+                <a href="dashboard-active.html"
+                    class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white md:hover:bg-gray-100 transition-colors shrink-0">
+                    <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </a>
+
+                <!-- Title -->
+                <h1
+                    class="text-[19px] md:text-3xl font-extrabold text-[#1a202c] tracking-tight text-center flex-1 pr-1 md:text-left transition-all">
+                    All groups</h1>
+
+                <!-- Plus Button -->
+                <a href="create-group.html"
+                    class="w-[38px] h-[38px] flex items-center justify-center rounded-full bg-[#005ef5] hover:bg-blue-700 transition-colors text-white shadow-[0_4px_14px_0_rgba(0,94,245,0.39)] shrink-0 group">
+                    <svg class="w-[20px] h-[20px] transform group-hover:rotate-90 transition-transform duration-300"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                </a>
+            </header>
+
+            <!-- Empty State Container -->
+            <div
+                class="flex-1 flex flex-col items-center justify-center py-10 md:py-16 md:bg-white md:rounded-3xl md:border md:border-gray-100 md:shadow-[0_8px_30px_-6px_rgba(0,0,0,0.04)] mt-2 md:mt-4 text-center">
+
+                <!-- Reused SVG Illustration from Dashboard Empty State -->
+                <div
+                    class="w-56 h-48 md:w-80 md:h-64 mb-6 md:mb-8 relative flex items-center justify-center pointer-events-none">
+                    <svg viewBox="0 0 240 180" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="w-full h-full drop-shadow-sm">
+                        <rect x="25" y="30" width="190" height="130" fill="#f1f5f9" rx="10" />
+                        <path d="M25 40 Q 25 30 35 30 L 205 30 Q 215 30 215 40 L 215 50 L 25 50 Z" fill="#e2e8f0" />
+                        <circle cx="40" cy="40" r="3" fill="#cbd5e1" />
+                        <circle cx="50" cy="40" r="3" fill="#cbd5e1" />
+                        <circle cx="60" cy="40" r="3" fill="#cbd5e1" />
+                        <line x1="25" y1="160" x2="215" y2="160" stroke="#cbd5e1" stroke-width="4"
+                            stroke-linecap="round" />
+
+                        <!-- Left Person -->
+                        <path d="M70 120 l-5 35" stroke="#2563eb" stroke-width="8" stroke-linecap="round" />
+                        <path d="M85 120 l2 35" stroke="#2563eb" stroke-width="8" stroke-linecap="round" />
+                        <path d="M60 80 Q 75 75 90 80 L 92 120 L 60 120 Z" fill="#0f172a" />
+                        <circle cx="75" cy="65" r="12" fill="#fcd34d" />
+                        <path d="M63 65 C 63 55, 87 55, 87 65" fill="#1e293b" />
+
+                        <!-- Right Person -->
+                        <path d="M150 120 l5 35" stroke="#3b82f6" stroke-width="7" stroke-linecap="round" />
+                        <path d="M165 120 l-2 35" stroke="#3b82f6" stroke-width="7" stroke-linecap="round" />
+                        <path d="M145 80 Q 155 75 165 80 L 165 120 L 140 120 Z" fill="#1e293b" />
+                        <circle cx="155" cy="65" r="10" fill="#fcd34d" />
+                        <path d="M145 65 C 145 50, 165 50, 165 65 C 165 75, 145 75, 145 65" fill="#0f172a" />
+
+                        <!-- Center Person -->
+                        <path d="M110 115 l-5 40" stroke="#334155" stroke-width="7" stroke-linecap="round" />
+                        <path d="M125 115 l5 40" stroke="#334155" stroke-width="7" stroke-linecap="round" />
+                        <path d="M105 75 Q 115 70 125 75 L 125 115 L 105 115 Z" fill="#3b82f6" />
+                        <circle cx="115" cy="60" r="11" fill="#78350f" />
+                        <circle cx="115" cy="55" r="12" fill="#0f172a" />
+
+                        <!-- Puzzle Pieces -->
+                        <path d="M 65 95 L 95 95 L 95 120 L 65 120 Z" fill="#1d4ed8" rx="2" />
+                        <circle cx="95" cy="107" r="6" fill="#1d4ed8" />
+                        <circle cx="80" cy="95" r="6" fill="#0f172a" />
+
+                        <path d="M 95 95 L 125 95 L 125 120 L 95 120 Z" fill="#93c5fd" rx="2" />
+                        <circle cx="125" cy="107" r="6" fill="#93c5fd" />
+                        <circle cx="95" cy="107" r="6" fill="#f1f5f9" />
+
+                        <path d="M 125 95 L 155 95 L 155 120 L 125 120 Z" fill="#2563eb" rx="2" />
+                        <circle cx="155" cy="107" r="6" fill="#2563eb" />
+                        <circle cx="125" cy="107" r="6" fill="#f1f5f9" />
+                    </svg>
+                </div>
+
+                <!-- Text Info -->
+                <h2 class="text-[20px] md:text-2xl font-extrabold text-gray-900 mb-2 md:mb-3 tracking-tight">No Groups
+                    Yet</h2>
+                <p
+                    class="text-[13px] md:text-[14.5px] text-gray-500 text-center leading-relaxed font-medium px-4 mb-8 max-w-[280px] md:max-w-sm">
+                    Looks like you aren't part of any shared expense groups yet. Create a new one or join via invite.
+                </p>
+
+                <!-- Actions Array -->
+                <div class="w-full max-w-[260px] md:max-w-[320px] flex flex-col space-y-3.5 mb-2">
+
+                    <!-- Create New Group Button -->
+                    <a href="create-group.html"
+                        class="w-full bg-[#005ef5] hover:bg-blue-700 transform md:hover:scale-[1.02] text-white font-bold py-3.5 md:py-4 px-6 rounded-xl flex items-center justify-center transition-all shadow-[0_4px_14px_0_rgba(0,118,255,0.39)] text-[13.5px] md:text-[14px] tracking-wide focus:ring-4 focus:ring-blue-100 outline-none">
+                        <svg class="w-[18px] h-[18px] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                        </svg>
+                        Create New Group
+                    </a>
+
+                    <!-- Join Existing Group Button -->
+                    <a href="#"
+                        class="w-full bg-white hover:bg-gray-50 border-[1.5px] border-[#e2e8f0] hover:border-gray-300 text-[#334155] font-bold py-3 md:py-3.5 px-6 rounded-xl flex items-center justify-center transition-all text-[13.5px] md:text-[14px] tracking-wide ring-offset-1 focus:ring-4 focus:ring-gray-100 outline-none shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
+                        <svg class="w-[18px] h-[18px] mr-2 text-gray-400" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
+                            </path>
+                        </svg>
+                        Join Existing Group
+                    </a>
+
+                </div>
+
+                <p class="mt-8 text-[11px] md:text-xs text-gray-400 font-medium">Have an invite code? <a href="#"
+                        class="text-[#005ef5] font-bold hover:underline">Tap here to enter</a></p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- BOTTOM TAB NAVIGATION (Mobile Only) -->
+    <nav
+        class="md:hidden fixed bottom-0 w-full bg-white border-t border-gray-100 shadow-[0_-4px_25px_-10px_rgba(0,0,0,0.08)] z-50 px-5 pt-3 pb-7 flex justify-between items-center rounded-t-3xl">
+        <!-- Home -->
+        <a href="dashboard-active.html" class="flex flex-col items-center space-y-1.5 group relative px-1">
+            <div
+                class="text-gray-400 rounded-3xl flex items-center justify-center group-hover:text-[#005ef5] transition-colors mt-1">
+                <svg class="w-[22px] h-[22px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+                    </path>
+                </svg>
+            </div>
+            <span
+                class="text-[11px] font-extrabold text-gray-500 group-hover:text-gray-900 tracking-wide transition-colors">Home</span>
+        </a>
+
+        <!-- Groups (Active) -->
+        <a href="#" class="flex flex-col items-center space-y-1 relative">
+            <div
+                class="bg-[#f0f5ff] text-[#005ef5] px-[22px] py-1.5 rounded-3xl flex items-center justify-center transition-transform hover:scale-105 active:scale-95">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                    </path>
+                </svg>
+            </div>
+            <span class="text-[11.5px] font-extrabold text-gray-900 tracking-wide mt-0.5">Groups</span>
+        </a>
+
+        <!-- Payment -->
+        <a href="#" class="flex flex-col items-center space-y-1.5 group relative px-1">
+            <div
+                class="text-gray-400 rounded-3xl flex items-center justify-center group-hover:text-[#005ef5] transition-colors mt-1">
+                <svg class="w-[22px] h-[22px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 9h6M9 11h6M11 11l3 4M10 9v6"></path>
+                </svg>
+            </div>
+            <span
+                class="text-[11px] font-extrabold text-gray-500 group-hover:text-gray-900 tracking-wide transition-colors">Payments</span>
+        </a>
+
+        <!-- Profile -->
+        <a href="#" class="flex flex-col items-center space-y-1.5 group relative px-1">
+            <div
+                class="text-gray-400 rounded-3xl flex items-center justify-center group-hover:text-[#005ef5] transition-colors mt-1">
+                <svg class="w-[22px] h-[22px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+            </div>
+            <span
+                class="text-[11px] font-extrabold text-gray-500 group-hover:text-gray-900 tracking-wide transition-colors">Profile</span>
+        </a>
+    </nav>
+
+</body>
+
+</html>

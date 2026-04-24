@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Collexa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="antialiased text-gray-800 bg-[#f8fbff] min-h-screen flex flex-col md:flex-row">
+
+    <!-- LEFT SIDEBAR (Desktop Web) -->
+    <aside
+        class="hidden md:flex w-64 lg:w-72 flex-col bg-white border-r border-gray-100 min-h-screen p-6 shadow-[4px_0_24px_-10px_rgba(0,0,0,0.03)] z-10 sticky top-0">
+        <!-- Brand Logo -->
+        <div class="flex items-center space-x-3 mb-12 mt-2 px-2">
+            <div class="w-10 h-10">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                    <path d="M50 15 C 70 15, 85 30, 85 50" stroke="#0055ff" stroke-width="7" stroke-linecap="round" />
+                    <circle cx="85" cy="50" r="7" fill="#15803d" />
+                    <path d="M80 55 C 70 75, 45 85, 25 75" stroke="#15803d" stroke-width="7" stroke-linecap="round" />
+                    <circle cx="25" cy="75" r="7" fill="#f59e0b" />
+                    <path d="M20 65 C 10 40, 25 15, 45 15" stroke="#f59e0b" stroke-width="7" stroke-linecap="round" />
+                    <circle cx="45" cy="15" r="7" fill="#0055ff" />
+                </svg>
+            </div>
+            <span class="text-2xl font-extrabold tracking-tight text-[#1a202c]">Collexa</span>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex-1 space-y-2">
+            <a href="#"
+                class="flex items-center space-x-3 px-4 py-3.5 bg-[#f0f5ff] text-[#005ef5] rounded-xl font-bold tracking-wide transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+                    </path>
+                </svg>
+                <span>Dashboard</span>
+            </a>
+            <a href="#"
+                class="flex items-center space-x-3 px-4 py-3.5 text-gray-500 hover:bg-gray-50 hover:text-gray-900 rounded-xl font-semibold tracking-wide transition-colors">
+                <svg class="w-5 h-5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                    </path>
+                </svg>
+                <span>All Groups</span>
+            </a>
+            <a href="#"
+                class="flex items-center space-x-3 px-4 py-3.5 text-gray-500 hover:bg-gray-50 hover:text-gray-900 rounded-xl font-semibold tracking-wide transition-colors">
+                <svg class="w-5 h-5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 9h6M9 11h6M11 11l3 4M10 9v6"></path>
+                </svg>
+                <span>Payments</span>
+            </a>
+            <a href="#"
+                class="flex items-center space-x-3 px-4 py-3.5 text-gray-500 hover:bg-gray-50 hover:text-gray-900 rounded-xl font-semibold tracking-wide transition-colors">
+                <svg class="w-5 h-5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+                <span>Profile</span>
+            </a>
+        </nav>
+
+        <!-- Logout -->
+        <div class="mt-auto border-t border-gray-100 pt-6">
+            <a href="login.html"
+                class="flex items-center space-x-3 px-4 py-3 text-red-500 hover:bg-red-50 rounded-xl font-bold tracking-wide transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
+                    </path>
+                </svg>
+                <span>Sign Out</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- CONTENT AREA -->
+    <main class="flex-1 flex flex-col min-h-screen">
+        <!-- Dashboard Container: mobile max-w, web full fluid width -->
+        <div
+            class="w-full max-w-[480px] md:max-w-none mx-auto md:mx-0 flex flex-col p-5 md:p-10 lg:p-14 relative h-full bg-[#f8fbff] sm:shadow-none sm:bg-transparent">
+
+            <!-- Header Section -->
+            <header class="flex justify-between items-end md:items-center mb-8 pt-2">
+                <div>
+                    <!-- Mobile logo, visible only below md -->
+                    <div class="md:hidden flex items-center space-x-2 mb-6">
+                        <div class="w-8 h-8">
+                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="w-full h-full">
+                                <path d="M50 15 C 70 15, 85 30, 85 50" stroke="#0055ff" stroke-width="7"
+                                    stroke-linecap="round" />
+                                <circle cx="85" cy="50" r="7" fill="#15803d" />
+                                <path d="M80 55 C 70 75, 45 85, 25 75" stroke="#15803d" stroke-width="7"
+                                    stroke-linecap="round" />
+                                <circle cx="25" cy="75" r="7" fill="#f59e0b" />
+                                <path d="M20 65 C 10 40, 25 15, 45 15" stroke="#f59e0b" stroke-width="7"
+                                    stroke-linecap="round" />
+                                <circle cx="45" cy="15" r="7" fill="#0055ff" />
+                            </svg>
+                        </div>
+                        <span class="text-xl font-extrabold tracking-tight text-[#1a202c]">Collexa</span>
+                    </div>
+
+                    <p
+                        class="text-sm md:text-[15px] text-gray-500 md:text-gray-600 font-semibold md:font-bold mb-1 tracking-wide uppercase md:normal-case">
+                        👋 Welcome back</p>
+                    <h1 class="text-[22px] md:text-3xl font-extrabold text-[#1a202c] tracking-tight">Sandra S</h1>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button
+                        class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center relative hover:bg-gray-50 transition-colors">
+                        <svg class="w-5 h-5 md:w-6 md:h-6 text-gray-700" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                        </svg>
+                        <span
+                            class="absolute top-2.5 right-2.5 md:top-3 md:right-3 w-2.5 h-2.5 bg-red-500 border-2 border-white rounded-full"></span>
+                    </button>
+                    <!-- Web Avatar -->
+                    <div
+                        class="hidden md:block w-12 h-12 rounded-full bg-blue-100 border-2 border-white shadow-sm overflow-hidden flex items-center justify-center text-blue-600 font-bold text-lg">
+                        S
+                    </div>
+                </div>
+            </header>
+
+            <!-- KYC Banner -->
+            <div
+                class="bg-[#fef3da] rounded-xl md:rounded-2xl p-4 md:p-6 mb-8 md:mb-10 flex items-center justify-between cursor-pointer border border-[#fde6b3] shadow-sm hover:shadow-md transition-all group">
+                <div class="flex items-center space-x-4 md:space-x-5">
+                    <div
+                        class="w-10 h-10 md:w-12 md:h-12 bg-[#fcad5a] rounded-lg md:rounded-xl flex items-center justify-center text-white shrink-0 shadow-[0_2px_10px_rgba(252,173,90,0.4)] transition-transform group-hover:scale-105">
+                        <svg class="w-[18px] h-[18px] md:w-5 md:h-5" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3
+                            class="text-[13px] md:text-base font-extrabold text-[#78350f] leading-tight tracking-wide mb-0.5 md:mb-1">
+                            Complete your KYC</h3>
+                        <p class="text-[10px] md:text-xs text-[#92400e] font-medium tracking-wide">Verify your identity
+                            to unlock limitless features</p>
+                    </div>
+                </div>
+                <svg class="w-5 h-5 md:w-6 md:h-6 text-[#92400e] transition-transform group-hover:translate-x-1"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="mb-10 md:mb-12">
+                <h2 class="text-[16px] md:text-lg font-extrabold text-gray-900 mb-4 tracking-wide">Overview</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                    <!-- My Collections Card -->
+                    <div
+                        class="bg-white rounded-xl md:rounded-2xl p-5 border border-gray-100 shadow-[0_4px_15px_-4px_rgba(6,81,237,0.08)] md:shadow-[0_8px_20px_-6px_rgba(6,81,237,0.06)] flex flex-col items-start hover:border-blue-200 transition-colors cursor-pointer group">
+                        <div class="w-7 h-7 md:w-8 md:h-8 text-[#005ef5] bg-blue-50 p-1.5 md:p-2 rounded-lg mb-3">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                                <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                                <circle cx="12" cy="12" r="2"></circle>
+                                <path d="M6 12h.01M18 12h.01"></path>
+                            </svg>
+                        </div>
+                        <h3
+                            class="text-[22px] md:text-3xl font-black text-gray-900 mb-1 leading-tight group-hover:text-[#005ef5] transition-colors">
+                            ₹500</h3>
+                        <p class="text-[9.5px] md:text-[10px] font-extrabold text-gray-400 tracking-widest uppercase">MY
+                            COLLECTIONS</p>
+                    </div>
+
+                    <!-- My Payments Card -->
+                    <div
+                        class="bg-white rounded-xl md:rounded-2xl p-5 border border-gray-100 shadow-[0_4px_15px_-4px_rgba(6,81,237,0.08)] md:shadow-[0_8px_20px_-6px_rgba(6,81,237,0.06)] flex flex-col items-start hover:border-blue-200 transition-colors cursor-pointer group">
+                        <div class="w-7 h-7 md:w-8 md:h-8 text-[#005ef5] bg-blue-50 p-1.5 md:p-2 rounded-lg mb-3">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 15 15"></polyline>
+                            </svg>
+                        </div>
+                        <h3
+                            class="text-[22px] md:text-3xl font-black text-gray-900 mb-1 leading-tight group-hover:text-[#005ef5] transition-colors">
+                            ₹12</h3>
+                        <p class="text-[9.5px] md:text-[10px] font-extrabold text-gray-400 tracking-widest uppercase">MY
+                            PAYMENTS</p>
+                    </div>
+
+                    <!-- Web Exclusive Optional Cards (for balance) - Visible on lg screens perfectly -->
+                    <div
+                        class="hidden md:flex bg-white/50 border border-gray-200 border-dashed rounded-2xl p-5 flex-col items-center justify-center text-gray-400 hover:text-[#005ef5] hover:border-blue-300 hover:bg-white transition-all cursor-pointer">
+                        <svg class="w-8 h-8 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            stroke-width="2">
+                            <path d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <p class="text-[10px] font-extrabold tracking-widest uppercase">ADD CARD</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Groups Section (Populated) -->
+            <div class="mb-12 w-full flex-1">
+                <div class="flex justify-between items-center mb-5">
+                    <div class="flex items-center space-x-2">
+                        <h2 class="text-[16px] md:text-lg font-extrabold text-gray-900 tracking-wide">Groups</h2>
+                        <span
+                            class="bg-[#eef5fc] text-gray-700 text-[10.5px] font-bold px-2 py-0.5 rounded shadow-sm opacity-90">2</span>
+                    </div>
+                    <a href="#" class="text-[#005ef5] text-[13px] font-extrabold hover:underline tracking-wide">View
+                        All</a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7">
+
+                    <!-- Group Card 1 -->
+                    <div
+                        class="bg-white rounded-2xl border border-gray-100 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.06)] overflow-hidden hover:shadow-lg transition-shadow cursor-default">
+                        <div class="p-6">
+                            <div class="flex items-start md:items-center space-x-4 mb-6">
+                                <!-- Image Thumbnail Placeholder (Across Europe) -->
+                                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=200&auto=format&fit=crop"
+                                    alt="Group Thumbnail"
+                                    class="w-12 h-12 md:w-14 md:h-14 rounded-xl object-cover shadow-sm border border-gray-100 shrink-0">
+                                <div class="flex-1">
+                                    <h3
+                                        class="text-[16px] md:text-[17px] font-extrabold text-[#1a202c] mb-1.5 leading-tight">
+                                        Across Europe</h3>
+                                    <div class="flex items-center">
+                                        <!-- Miniature avatars overlap -->
+                                        <div class="flex -space-x-2 mr-3">
+                                            <div
+                                                class="w-5 h-5 rounded-full bg-blue-100 border-[1.5px] border-white z-20">
+                                            </div>
+                                            <div
+                                                class="w-5 h-5 rounded-full bg-[#93c5fd] border-[1.5px] border-white z-10">
+                                            </div>
+                                            <div
+                                                class="w-5 h-5 rounded-full bg-[#005ef5] border-[1.5px] border-white z-0 text-[8px] flex items-center justify-center text-white font-extrabold shadow-sm">
+                                                +6</div>
+                                        </div>
+                                        <span
+                                            class="text-[11px] font-semibold text-gray-500 uppercase tracking-widest">8
+                                            Members</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-end mb-2.5">
+                                <span
+                                    class="text-[10px] font-extrabold text-gray-500 uppercase tracking-widest flex items-center">
+                                    Progress: 50%
+                                </span>
+                                <span class="text-[13px] font-black text-[#005ef5] leading-none">₹1,625 <span
+                                        class="text-blue-300 font-bold px-0.5">/</span> ₹2,500</span>
+                            </div>
+
+                            <!-- Progress Bar -->
+                            <div class="w-full bg-[#f0f5ff] h-2.5 rounded-full overflow-hidden shadow-inner">
+                                <div class="bg-[#005ef5] h-full rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_rgba(0,94,245,0.4)]"
+                                    style="width: 50%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Action Footer buttons -->
+                        <div class="grid grid-cols-2 border-t border-gray-50 bg-[#fbfdff]">
+                            <button
+                                class="py-4 flex items-center justify-center border-r border-gray-50 hover:bg-[#f0f5ff] transition-colors group px-2">
+                                <svg class="w-[18px] h-[18px] text-[#005ef5] mr-2 opacity-80 group-hover:opacity-100 transition-opacity"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8"></path>
+                                </svg>
+                                <span class="text-[11.5px] font-bold text-[#1a202c]">Add Expense</span>
+                            </button>
+                            <button
+                                class="py-4 flex items-center justify-center hover:bg-[#f0f5ff] transition-colors group px-2">
+                                <svg class="w-[18px] h-[18px] text-[#005ef5] mr-2 opacity-80 group-hover:opacity-100 transition-opacity"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z">
+                                    </path>
+                                </svg>
+                                <span class="text-[11.5px] font-bold text-[#1a202c]">Invite</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Group Card 2 -->
+                    <div
+                        class="bg-white rounded-2xl border border-gray-100 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.06)] overflow-hidden hover:shadow-lg transition-shadow cursor-default">
+                        <div class="p-6">
+                            <div class="flex items-start md:items-center space-x-4 mb-6">
+                                <!-- Image Thumbnail Placeholder (Euro Trip 2026) -->
+                                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=200&auto=format&fit=crop"
+                                    alt="Group Thumbnail"
+                                    class="w-12 h-12 md:w-14 md:h-14 rounded-xl object-cover shadow-sm border border-gray-100 shrink-0">
+                                <div class="flex-1">
+                                    <h3
+                                        class="text-[16px] md:text-[17px] font-extrabold text-[#1a202c] mb-1.5 leading-tight">
+                                        Euro Trip 2026</h3>
+                                    <div class="flex items-center">
+                                        <!-- Miniature avatars overlap -->
+                                        <div class="flex -space-x-2 mr-3">
+                                            <div
+                                                class="w-5 h-5 rounded-full bg-blue-100 border-[1.5px] border-white z-20">
+                                            </div>
+                                            <div
+                                                class="w-5 h-5 rounded-full bg-[#93c5fd] border-[1.5px] border-white z-10">
+                                            </div>
+                                            <div
+                                                class="w-5 h-5 rounded-full bg-[#005ef5] border-[1.5px] border-white z-0 text-[8px] flex items-center justify-center text-white font-extrabold shadow-sm">
+                                                +6</div>
+                                        </div>
+                                        <span
+                                            class="text-[11px] font-semibold text-gray-500 uppercase tracking-widest">8
+                                            Members</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-end mb-2.5">
+                                <span
+                                    class="text-[10px] font-extrabold text-gray-500 uppercase tracking-widest flex items-center">
+                                    Progress: 90%
+                                </span>
+                                <span class="text-[13px] font-black text-[#005ef5] leading-none">₹1,625 <span
+                                        class="text-blue-300 font-bold px-0.5">/</span> ₹2,500</span>
+                            </div>
+
+                            <!-- Progress Bar -->
+                            <div class="w-full bg-[#f0f5ff] h-2.5 rounded-full overflow-hidden shadow-inner">
+                                <div class="bg-[#005ef5] h-full rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_rgba(0,94,245,0.4)]"
+                                    style="width: 90%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Action Footer buttons -->
+                        <div class="grid grid-cols-2 border-t border-gray-50 bg-[#fbfdff]">
+                            <button
+                                class="py-4 flex items-center justify-center border-r border-gray-50 hover:bg-[#f0f5ff] transition-colors group px-2">
+                                <svg class="w-[18px] h-[18px] text-[#005ef5] mr-2 opacity-80 group-hover:opacity-100 transition-opacity"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8"></path>
+                                </svg>
+                                <span class="text-[11.5px] font-bold text-[#1a202c]">Add Expense</span>
+                            </button>
+                            <button
+                                class="py-4 flex items-center justify-center hover:bg-[#f0f5ff] transition-colors group px-2">
+                                <svg class="w-[18px] h-[18px] text-[#005ef5] mr-2 opacity-80 group-hover:opacity-100 transition-opacity"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z">
+                                    </path>
+                                </svg>
+                                <span class="text-[11.5px] font-bold text-[#1a202c]">Invite</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instant Payment Links Promo (Moves down automatically) -->
+            <div
+                class="mt-4 md:mt-6 bg-[#eef5fc] rounded-t-[32px] md:rounded-3xl p-6 md:p-8 relative overflow-hidden flex flex-col md:flex-row items-center justify-between border-t border-[#e2edf9] md:border-none shadow-[0_-4px_15px_-5px_rgba(0,0,0,0.03)] md:shadow-none">
+
+                <div class="z-10 relative md:w-3/5 md:pr-4 pt-2">
+                    <h2 class="text-xl md:text-[22px] font-extrabold text-gray-900 mb-1 tracking-tight">Instant Payment
+                        Links</h2>
+                    <p
+                        class="text-[13px] md:text-[14px] text-gray-500 font-medium mb-5 leading-relaxed max-w-[250px] md:max-w-xs">
+                        Send payment link to multiple people instantly
+                    </p>
+                    <button
+                        class="bg-[#005ef5] hover:bg-blue-700 text-white font-bold py-2.5 px-5 rounded-md flex items-center justify-center transition-all shadow-[0_4px_14px_0_rgba(0,118,255,0.39)] text-[12.5px] w-[200px] md:w-auto">
+                        <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
+                            </path>
+                        </svg>
+                        Send Payment Link
+                    </button>
+                </div>
+
+                <!-- Graphic Illustration -->
+                <div
+                    class="z-10 absolute md:relative right-0 top-10 md:top-0 md:mt-0 md:w-2/5 flex justify-end opacity-90 md:opacity-100 pointer-events-none md:pointer-events-auto [transform:scale(0.85)_translateX(30px)] md:[transform:none]">
+                    <div class="w-40 h-40 relative flex items-center justify-center">
+                        <svg viewBox="0 0 200 200" fill="none" class="w-full h-full drop-shadow-md">
+                            <!-- Background decoration -->
+                            <path d="M 140 40 C 145 20, 165 20, 170 30 L 155 60 Z" fill="#38bdf8" />
+                            <circle cx="50" cy="50" r="16" fill="#f59e0b" />
+                            <path d="M43 45 L57 55 M57 45 L43 55" stroke="white" stroke-width="2.5"
+                                stroke-linecap="round" />
+                            <circle cx="160" cy="110" r="12" fill="#f59e0b" />
+                            <path d="M155 106 L165 114 M165 106 L155 114" stroke="white" stroke-width="2"
+                                stroke-linecap="round" />
+                            <!-- Hand Back -->
+                            <path d="M150 140 Q 180 150 190 180 L 150 160 Z" fill="#fdb38a" />
+                            <!-- Device Body -->
+                            <rect x="75" y="35" width="60" height="120" rx="8" fill="white" stroke="#334155"
+                                stroke-width="3.5" />
+                            <rect x="80" y="45" width="50" height="95" rx="3" fill="#f8fafc" />
+                            <line x1="95" y1="40" x2="115" y2="40" stroke="#94a3b8" stroke-width="2"
+                                stroke-linecap="round" />
+                            <!-- UI details in phone -->
+                            <circle cx="105" cy="60" r="6" stroke="#0055ff" stroke-width="1.5" fill="none" />
+                            <circle cx="105" cy="60" r="2.5" fill="#f59e0b" />
+                            <rect x="90" y="80" width="30" height="3" rx="1.5" fill="#e2e8f0" />
+                            <rect x="90" y="88" width="20" height="3" rx="1.5" fill="#e2e8f0" />
+                            <rect x="90" y="115" width="30" height="12" rx="2" fill="#005ef5" />
+                            <!-- Holding Hand Thumb Front -->
+                            <path d="M135 110 Q 165 100 170 140 Q 170 160 160 180 L 115 160 Z" fill="#fca5a5" />
+                            <path d="M135 110 Q 165 100 170 140 Q 170 160 160 180 L 115 160 Z" fill="#fdba74" />
+                            <!-- Wristband -->
+                            <path d="M158 142 L 180 180" stroke="#f0601f" stroke-width="10" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="absolute top-0 left-0 w-full h-[50px] opacity-40 pointer-events-none overflow-hidden">
+                    <svg viewBox="0 0 1000 100" preserveAspectRatio="none" class="w-full h-full -translate-y-4">
+                        <path d="M0,50 Q125,100 250,50 T500,50 T750,50 T1000,50 L1000,0 L0,0 Z" fill="#dcf0fe" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Spacer for mobile footer -->
+            <div class="h-28 md:hidden"></div>
+
+        </div>
+    </main>
+
+    <!-- BOTTOM TAB NAVIGATION (Mobile Only) -->
+    <nav
+        class="md:hidden fixed bottom-0 w-full bg-white border-t border-gray-100 shadow-[0_-4px_25px_-10px_rgba(0,0,0,0.08)] z-50 px-5 pt-3 pb-7 flex justify-between items-center rounded-t-3xl">
+        <!-- Home (Active) -->
+        <a href="#" class="flex flex-col items-center space-y-1 relative">
+            <div
+                class="bg-[#f0f5ff] text-[#005ef5] px-[22px] py-1.5 rounded-3xl flex items-center justify-center transition-transform hover:scale-105 active:scale-95">
+                <svg class="w-[22px] h-[22px]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 3l8 6v12h-5v-7H9v7H4V9l8-6z"></path>
+                </svg>
+            </div>
+            <span class="text-[11.5px] font-extrabold text-gray-900 tracking-wide mt-0.5">Home</span>
+        </a>
+
+        <!-- Groups -->
+        <a href="#" class="flex flex-col items-center space-y-1.5 group relative px-1">
+            <div
+                class="text-gray-400 rounded-3xl flex items-center justify-center group-hover:text-[#005ef5] transition-colors mt-1">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                    </path>
+                </svg>
+            </div>
+            <span
+                class="text-[11px] font-extrabold text-gray-500 group-hover:text-gray-900 tracking-wide transition-colors">Groups</span>
+        </a>
+
+        <!-- Payment -->
+        <a href="#" class="flex flex-col items-center space-y-1.5 group relative px-1">
+            <div
+                class="text-gray-400 rounded-3xl flex items-center justify-center group-hover:text-[#005ef5] transition-colors mt-1">
+                <svg class="w-[22px] h-[22px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 9h6M9 11h6M11 11l3 4M10 9v6"></path>
+                </svg>
+            </div>
+            <span
+                class="text-[11px] font-extrabold text-gray-500 group-hover:text-gray-900 tracking-wide transition-colors">Payments</span>
+        </a>
+
+        <!-- Profile -->
+        <a href="#" class="flex flex-col items-center space-y-1.5 group relative px-1">
+            <div
+                class="text-gray-400 rounded-3xl flex items-center justify-center group-hover:text-[#005ef5] transition-colors mt-1">
+                <svg class="w-[22px] h-[22px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+            </div>
+            <span
+                class="text-[11px] font-extrabold text-gray-500 group-hover:text-gray-900 tracking-wide transition-colors">Profile</span>
+        </a>
+    </nav>
+
+</body>
+
+</html>

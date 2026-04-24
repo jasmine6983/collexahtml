@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account - Collexa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .mobile-bg {
+            background: linear-gradient(180deg, #dcf0fe 0%, #cde8fd 100%);
+        }
+
+        @media (min-width: 768px) {
+            .mobile-bg {
+                background: white;
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased text-gray-800 bg-white flex min-h-[100dvh] flex-col md:flex-row">
+
+    <!-- LEFT SIDE: Desktop Brand Area -->
+    <div
+        class="hidden md:flex flex-col justify-between w-1/2 p-12 lg:p-20 bg-gradient-to-br from-[#dcf0fe] to-[#cde8fd] border-r border-[#bae6fd]">
+        <div class="w-full pt-10">
+            <!-- Brand Logo Desktop -->
+            <div class="flex items-center space-x-4 mb-16">
+                <div class="w-14 h-14">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                        <path d="M50 15 C 70 15, 85 30, 85 50" stroke="#0055ff" stroke-width="7"
+                            stroke-linecap="round" />
+                        <circle cx="85" cy="50" r="7" fill="#15803d" />
+                        <path d="M80 55 C 70 75, 45 85, 25 75" stroke="#15803d" stroke-width="7"
+                            stroke-linecap="round" />
+                        <circle cx="25" cy="75" r="7" fill="#f59e0b" />
+                        <path d="M20 65 C 10 40, 25 15, 45 15" stroke="#f59e0b" stroke-width="7"
+                            stroke-linecap="round" />
+                        <circle cx="45" cy="15" r="7" fill="#0055ff" />
+                    </svg>
+                </div>
+                <span class="text-3xl font-extrabold tracking-tight text-[#2d3748]">Collexa</span>
+            </div>
+
+            <!-- Value Proposition -->
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-[1.15]">Join Collexa today.</h2>
+            <p class="text-[17px] lg:text-lg text-gray-600 font-medium max-w-md leading-relaxed">Start tracking your
+                shared balances with roommates, trips, groups, and friends seamlessly in one place.</p>
+        </div>
+
+        <div class="w-full pb-6">
+            <p class="text-sm font-medium text-gray-400">© 2026 Collexa Inc. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE: Form Area -->
+    <div class="flex-1 flex w-full md:w-1/2 mobile-bg min-h-[100dvh] overflow-y-auto">
+        <div class="w-full max-w-[380px] mx-auto p-6 sm:p-8 flex flex-col justify-center min-h-full">
+
+            <!-- Mobile Logo Area -->
+            <div class="md:hidden mt-8 mb-8 flex flex-col items-center justify-center">
+                <div class="w-16 h-16 relative mb-4">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 15 C 70 15, 85 30, 85 50" stroke="#0055ff" stroke-width="7"
+                            stroke-linecap="round" />
+                        <circle cx="85" cy="50" r="7" fill="#15803d" />
+                        <path d="M80 55 C 70 75, 45 85, 25 75" stroke="#15803d" stroke-width="7"
+                            stroke-linecap="round" />
+                        <circle cx="25" cy="75" r="7" fill="#f59e0b" />
+                        <path d="M20 65 C 10 40, 25 15, 45 15" stroke="#f59e0b" stroke-width="7"
+                            stroke-linecap="round" />
+                        <circle cx="45" cy="15" r="7" fill="#0055ff" />
+                    </svg>
+                </div>
+                <h1 class="text-3xl font-extrabold tracking-tight text-[#2d3748]">Collexa</h1>
+            </div>
+
+            <!-- Main Form Content -->
+            <div class="text-center md:text-left mb-8">
+                <h2 class="text-[24px] md:text-3xl font-bold text-[#1a202c] mb-2">Create an Account</h2>
+                <p class="text-[13.5px] md:text-[15px] text-gray-500 font-medium">Sign up to manage your shared expenses
+                </p>
+            </div>
+
+            <form class="flex flex-col flex-1 pb-8" action="otp.html" method="GET">
+                <div class="space-y-4 mb-6">
+                    <div>
+                        <label class="block text-[13px] md:text-sm font-bold text-[#2d3748] mb-2" for="name">Full
+                            Name</label>
+                        <input type="text" id="name" placeholder="John Doe"
+                            class="w-full px-4 py-3.5 md:py-4 rounded-md border border-gray-200 shadow-sm md:shadow-none bg-white md:bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#005ef5] focus:border-transparent transition-all outline-none placeholder-gray-400 text-[14px] md:text-[15px]">
+                    </div>
+                    <div>
+                        <label class="block text-[13px] md:text-sm font-bold text-[#2d3748] mb-2" for="number">Enter
+                            your Number</label>
+                        <input type="tel" id="number" placeholder="eg.8891XXXX51"
+                            class="w-full px-4 py-3.5 md:py-4 rounded-md border border-gray-200 shadow-sm md:shadow-none bg-white md:bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#005ef5] focus:border-transparent transition-all outline-none placeholder-gray-400 text-[14px] md:text-[15px]">
+                    </div>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-[#005ef5] hover:bg-blue-700 text-white font-semibold py-3.5 md:py-4 px-4 rounded-md flex items-center justify-center transition-colors text-[14.5px] md:text-[15px] shadow-sm">
+                    Sign Up
+                    <svg class="w-4 h-4 md:w-5 md:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <div class="mt-8 mb-6 flex items-center w-full opacity-80">
+                    <div class="h-[1px] bg-gray-300 flex-1"></div>
+                    <span class="px-4 text-[11px] tracking-wider text-gray-400 font-bold uppercase">OR</span>
+                    <div class="h-[1px] bg-gray-300 flex-1"></div>
+                </div>
+
+                <div class="text-center md:text-left text-[14px] md:text-[14.5px] mb-8">
+                    <span class="text-gray-500 font-medium">Already have an account?</span>
+                    <a href="login.html" class="text-[#005ef5] font-bold hover:underline">Sign in</a>
+                </div>
+
+                <div class="mt-auto text-center md:text-left pt-6">
+                    <p
+                        class="text-[10.5px] md:text-[12px] text-gray-400 leading-relaxed max-w-[220px] md:max-w-full mx-auto md:mx-0 font-medium">
+                        By signing up, you agree to our <a href="#" class="hover:underline text-gray-500">Terms of
+                            Service</a> and <a href="#" class="hover:underline text-gray-500">Privacy Policy</a>.
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
